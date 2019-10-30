@@ -2,16 +2,16 @@
 <ices>
 
     <!-- run in background  -->
-    <background>1</background>
+    <background>0</background>
     <!-- where logs go. -->
     <logpath>/var/log/ices</logpath>
     <logfile>ices.log</logfile>
     <!-- size in kilobytes -->
     <logsize>2048</logsize>
     <!-- 1=error, 2=warn, 3=infoa ,4=debug -->
-    <loglevel>2</loglevel>
+    <loglevel>3</loglevel>
     <!-- logfile is ignored if this is set to 1 -->
-    <consolelog>0</consolelog>
+    <consolelog>1</consolelog>
 
     <!-- optional filename to write process id to -->
     <!-- <pidfile>/home/ices/ices.pid</pidfile> -->
@@ -19,7 +19,7 @@
     <stream>
         <!-- metadata used for stream listing -->
         <metadata>
-            <name>My Vinyl</name>
+            <name>Vinyl Stream</name>
             <genre>Vinyl</genre>
 	    <description>A live stream of vinyl records.</description>
             <url>http://{{ url }}</url>
@@ -63,7 +63,7 @@
 
             <hostname>localhost</hostname>
             <port>8000</port>
-            <password>verysecretpassword</password>
+            <password>{{ password }}</password>
 	    <mount>/stream.ogg</mount>
             <yp>1</yp>   <!-- allow stream to be advertised on YP, default 0 -->
 

@@ -1,10 +1,14 @@
 [Unit]
 Description=Vinyl Streaming Service
+Requires=icecast2.service
+After=network-online.target
+Wants=network-online.target
 
 [Service]
-Type=notify
+Type=simple
 ExecStart=/usr/bin/ices2 /etc/ices2/ices-alsa.xml
 Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
+
