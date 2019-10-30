@@ -1,0 +1,10 @@
+[Unit]
+Description=Vinyl Streaming Service
+
+[Service]
+Type=notify
+ExecStart=/usr/bin/ices2 /etc/ices2/ices-alsa.xml
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
